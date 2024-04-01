@@ -116,10 +116,10 @@ jobs:
 
     steps:
 
-      - name: Set up Environment Variables
+      # - name: Set up Environment Variables
           
-        run: |
-           echo "BOT_TOKEN=${{ secrets.BOT_TOKEN }}" >> $GITHUB_ENV
+      #   run: |
+      #      echo "BOT_TOKEN=${{ secrets.BOT_TOKEN }}" >> $GITHUB_ENV
    
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -164,5 +164,5 @@ jobs:
           git config user.email "abisheck.g@netxd.com"
           git tag $NEW_TAG         
           git push origin $NEW_TAG
-        env:
-          BOT_TOKEN: ${{ secrets.BOT_TOKEN }}             
+        # env:
+        #   BOT_TOKEN: ${{ secrets.BOT_TOKEN }}             
